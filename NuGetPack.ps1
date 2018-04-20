@@ -1,4 +1,4 @@
-﻿$nuget = "$PSScriptRoot\build\tools\NuGet.exe"
+﻿$nuget = "NuGet.exe"
 $ciaoProps = "$PSScriptRoot\Ciao.props"
 $assembly = "SharpRaven.Log4Net"
 $packagesConfig = "$PSScriptRoot\src\app\$assembly\packages.config"

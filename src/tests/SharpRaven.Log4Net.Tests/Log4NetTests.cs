@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Configuration;
 
 using NUnit.Framework;
@@ -24,7 +24,7 @@ namespace SharpRaven.Log4Net.Tests
         }
 
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void TestFixtureSetUp()
         {
             // This is needed when running tests under NUnit since NUnit uses log4net internally
