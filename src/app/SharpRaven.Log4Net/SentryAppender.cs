@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Web;
 
 using log4net.Layout;
 using log4net.Util;
@@ -25,6 +26,7 @@ namespace SharpRaven.Log4Net
         public string Logger { get; set; }
         public string Environment { get; set; }
         public string Release { get; set; }
+        public string Tags { get; set; }
         private readonly List<SentryTag> tagLayouts = new List<SentryTag>();
 
         public void AddTag(SentryTag tag)
@@ -46,6 +48,20 @@ namespace SharpRaven.Log4Net
                     // log. See <add key="log4net.Internal.Debug" value="true"/>
                     ErrorOnCapture = ex => LogLog.Error(typeof (SentryAppender), "[" + Name + "] " + ex.Message, ex)
                 };
+
+                if (!string.IsNullOrWhiteSpace(Tags))
+                {
+                    var tags = Tags.Split('&');
+                    foreach (var tagPair in tags)
+                    {
+                        var keyValue = tagPair.Split(new[] { '=' }, 2);
+                        if (keyValue.Length == 2)
+                        {
+                            var layout = new Layout2RawLayoutAdapter(new PatternLayout(HttpUtility.UrlDecode(keyValue[1])));
+                            AddTag(new SentryTag { Name = keyValue[0], Layout = layout  });
+                        }
+                    }
+                }
             }
 
             SentryEvent sentryEvent = null;
