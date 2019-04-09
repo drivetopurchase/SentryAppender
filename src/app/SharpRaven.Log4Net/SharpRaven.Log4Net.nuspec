@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>SharpRaven.Log4Net.Updated</id>
+    <id>SharpRaven.Log4Net.WithContext</id>
     <version>$version$</version>
-    <title>SharpRaven.Log4Net (SentryAppender)</title>
-    <authors>Adam Hill, Chris Eldredge</authors>
-    <owners>The Motley Fool, LLC</owners>
-    <projectUrl>https://github.com/volodymyrstagrp/SentryAppender</projectUrl>
+    <title>SharpRaven.Log4Net (SentryAppender with context)</title>
+    <authors>Adam Hill, Chris Eldredge, Christophe Eble</authors>
+    <owners>The Motley Fool, LLC, Bubbles</owners>
+    <projectUrl>https://github.com/drivetopurchase/SentryAppender</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>log4net appender to send errors to Sentry (getsentry.com and github.com/getsentry/sentry).</description>
-    <releaseNotes>See https://github.com/volodymyrstagrp/SentryAppender/releases</releaseNotes>
+    <releaseNotes>See https://github.com/drivetopurchase/SentryAppender/releases</releaseNotes>
     <copyright>N/A</copyright>
     <tags>sentry logging monitoring log4net</tags>
     <iconUrl>https://raw.githubusercontent.com/getsentry/raven-csharp/master/sentry-icon.png</iconUrl>

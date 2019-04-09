@@ -1,16 +1,16 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("RavenAppender")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("SentryAppender.Log4Net.WithContext")]
+[assembly: AssemblyDescription("Log4Net Sentry Appender With Context")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("RavenAppender")]
-[assembly: AssemblyCopyright("Copyright ©  2013")]
+[assembly: AssemblyCompany("Bubbles")]
+[assembly: AssemblyProduct("SentryAppender.Log4Net.WithContext")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -21,7 +21,5 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("cb991214-41eb-463a-bce4-35cff33e9200")]
-
-#if DEBUG
-[assembly: InternalsVisibleTo("SharpRaven.Log4Net.Tests")]
-#endif
+[assembly: AssemblyVersion("1.0.3")]
+[assembly: AssemblyFileVersion("1.0.3")]
